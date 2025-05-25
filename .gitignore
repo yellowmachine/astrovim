@@ -1,0 +1,23 @@
+# Archivos de caché y temporales de Neovim
+.cache/
+.local/
+session/
+swap/
+undo/
+backup/
+*.swp
+*.swo
+
+# Archivos de lock y logs
+lazy-lock.json
+
+# Configuración local o sensible
+.neoconf.json
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Otros posibles temporales
+*.log
+
