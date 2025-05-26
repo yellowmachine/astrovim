@@ -1,9 +1,10 @@
 return {
   "brianhuster/autosave.nvim",
-  event = "InsertEnter",
+  --event = "InsertEnter",
+  lazy = false,
+  config = function() vim.g.autosave_enabled = true end,
   opts = {
-    -- Aquí puedes poner opciones de configuración si quieres
-    events = { "InsertLeave" }, -- Guarda al salir del modo inserción
-    silent = true, -- No mostrar mensajes de guardado
+    events = { "InsertLeave" },
+    silent = false,
   },
 }
