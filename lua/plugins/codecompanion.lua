@@ -8,28 +8,17 @@ return {
     strategies = {
       chat = {
         adapter = "ollama", -- Cambia a Ollama
+        model = "starcode2:instruct",
         -- Opcional: Especifica el modelo aquí para chats
       },
       inline = { -- Para sugerencias inline (como Copilot)
         adapter = "ollama",
+        model = "starcode2:instruct",
       },
       agent = { -- Para workflows/agents
         adapter = "ollama",
+        model = "starcode2:instruct",
       },
-    },
-    adapters = { -- Configuración global del adapter Ollama
-      ollama = function()
-        return require("codecompanion.adapters").use("ollama", {
-          schema = {
-            model = {
-              default = "starcoder2:instruct", -- Tu modelo local
-            },
-            -- Opcionales para optimizar (ajusta según tu hardware)
-            num_ctx = { default = 4096 }, -- Contexto (tokens), reduce si es lento
-            temperature = { default = 0.2 }, -- Para código más determinista
-          },
-        })
-      end,
     },
     -- Configuración general (incluye tu log_level)
     opts = {
